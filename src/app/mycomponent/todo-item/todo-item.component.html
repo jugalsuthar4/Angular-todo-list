@@ -1,0 +1,17 @@
+<div class="d-flex text-center justify-content-center flex-row todo-item">
+  <h4 [ngClass]="{ strike: !todo.active }">{{ todo.title }}</h4>
+  <h4>{{ todo.sno }}</h4>
+  <h4>{{ todo.desc }}</h4>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      value=""
+      id="flexCheckDefault"
+      (click)="onCheckBoxClick(todo)"
+      [checked]="!todo.active"
+    />
+    <label class="form-check-label" for="flexCheckDefault"> Done </label>
+  </div>
+  <button class="btn btn-sm btn-warning" (click)="onClick(todo)">Delete</button>
+</div>
